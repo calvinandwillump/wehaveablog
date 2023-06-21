@@ -103,5 +103,5 @@ div.box .scroll::-webkit-scrollbar-thumb:hover {
 }
 
 div.box .scroll .blog {
-    float: left;
+    text-align: justify;
 }

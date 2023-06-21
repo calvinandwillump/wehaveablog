@@ -1,0 +1,103 @@
+body {
+    background-color: dodgerblue;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+ul.topnav li {
+    float: left;
+}
+
+ul.topnav li a {
+    display: block;
+    padding: 14px 16px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+ul.topnav li a:hover:not(.active) {
+    background-color: white;
+}
+
+ul.topnav li a.active {
+    background-color: black;
+    color: white;
+}
+
+ul.topnav li.right {
+    float: right;
+}
+
+@media screen and (max-width: 600px) {
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+    ul.topnav {
+        position: static;
+      }
+    
+      div.box {
+        position: relative;
+        top: unset;
+        transform: unset;
+        margin-top: 100px;
+      }
+    }   
+
+div.box {
+    border-radius: 25px;
+    width: 300px;
+    height: 250px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+div.box .scroll {
+    max-height: 100%;
+    overflow: auto;
+    padding-right: 20px;
+    margin-right: -20px;
+}
+
+div.box .scroll img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+div.box .scroll::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 0%;
+}
+
+div.box .scroll::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 4px;
+    border: none;
+}
+
+div.box .scroll::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 0%;
+}
+
+div.box .scroll::-webkit-scrollbar-thumb:hover {
+   background-color: gray;
+}

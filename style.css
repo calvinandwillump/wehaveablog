@@ -105,3 +105,9 @@ div.box .scroll::-webkit-scrollbar-thumb:hover {
 div.box .scroll .blog {
     text-align: justify;
 }
+
+div.box .scroll .date {
+    text-align: left;
+    color: grey;
+    opacity: 50%;
+}

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showAlert(event) {
       event.preventDefault();
-      alert("This website is exploring what makes one stand out from others!");
+      alert("yeah we have a blog");
     }
   });
 

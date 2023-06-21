@@ -111,3 +111,43 @@ div.box .scroll .date {
     color: grey;
     opacity: 50%;
 }
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+  
+input[type="text"],
+textarea {
+    width: 285px;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    resize: none;
+}
+  
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px dodgerblue;
+}
+  
+input[type="submit"] {
+    width: 285px;
+    padding: 10px;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+input[type="submit"]:hover {
+    background-color: #2979ff;
+}

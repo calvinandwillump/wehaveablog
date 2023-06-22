@@ -1,17 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var navItem = document.getElementById("navitem");
-    navItem.addEventListener("click", showAlert);
+  var navItem = document.getElementById("navitem");
+  navItem.addEventListener("click", showAlert);
 
-    function showAlert(event) {
-      event.preventDefault();
-      alert("yeah we have a blog");
-    }
-  });
+  function showAlert(event) {
+    event.preventDefault();
+    alert("yeah we have a blog");
+  }
 
   window.addEventListener('resize', function() {
     var box = document.querySelector('.box');
     var windowHeight = window.innerHeight;
-    var thresholdHeight = 462; // Set the threshold height when the box should disappear
+    var thresholdHeight = 462;
     
     if (windowHeight < thresholdHeight) {
       box.style.display = 'none';
@@ -20,13 +19,44 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
   
-  // Initialize on page load
   window.addEventListener('load', function() {
     var box = document.querySelector('.box');
     var windowHeight = window.innerHeight;
-    var thresholdHeight = 462; // Set the threshold height when the box should disappear
+    var thresholdHeight = 462;
     
     if (windowHeight < thresholdHeight) {
       box.style.display = 'none';
     }
   });
+
+  const apiKey = '1f29df6b86584b0a91885733232206';
+  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=auto:ip`;
+
+  function fetchWeatherData() {
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not OK');
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (!data.location || !data.current) {
+          throw new Error('Invalid API response format');
+        }
+
+        const location = data.location.name;
+        const temperature = data.current.temp_c;
+        const condition = data.current.condition.text;
+
+        document.getElementById('location').textContent = location;
+        document.getElementById('temperature').textContent = temperature;
+        document.getElementById('condition').textContent = condition;
+      })
+      .catch(error => {
+        console.error('Error fetching weather data:', error);
+      });
+  }
+
+  fetchWeatherData();
+});

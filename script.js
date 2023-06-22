@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('resize', function() {
     var box = document.querySelector('.box');
     var windowHeight = window.innerHeight;
-    var thresholdHeight = 462;
+    var thresholdHeight = 556;
     
     if (windowHeight < thresholdHeight) {
       box.style.display = 'none';
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('load', function() {
     var box = document.querySelector('.box');
     var windowHeight = window.innerHeight;
-    var thresholdHeight = 462;
+    var thresholdHeight = 556;
     
     if (windowHeight < thresholdHeight) {
       box.style.display = 'none';

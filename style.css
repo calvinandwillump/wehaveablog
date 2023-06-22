@@ -42,18 +42,21 @@ ul.topnav li.right {
 
 @media screen and (max-width: 600px) {
     ul.topnav li.right,
-    ul.topnav li {float: none;}
+    ul.topnav li {
+        float: none;
+    }
+
     ul.topnav {
         position: static;
-      }
-    
-      div.box {
+    }
+
+    div.box {
         position: relative;
         top: unset;
         transform: unset;
         margin-top: 100px;
-      }
-    }   
+    }
+}
 
 div.box {
     border-radius: 25px;
@@ -67,6 +70,7 @@ div.box {
     text-align: center;
     padding: 20px;
     overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 div.box .scroll {
@@ -99,7 +103,7 @@ div.box .scroll::-webkit-scrollbar-track {
 }
 
 div.box .scroll::-webkit-scrollbar-thumb:hover {
-   background-color: gray;
+    background-color: gray;
 }
 
 div.box .scroll .blog {
@@ -117,7 +121,7 @@ label {
     margin-bottom: 5px;
     text-align: left;
 }
-  
+
 input[type="text"],
 textarea {
     width: 285px;
@@ -127,17 +131,17 @@ textarea {
     margin-bottom: 10px;
     border-radius: 4px;
     resize: none;
+    padding-right: 10px;
 }
-  
 
 input[type="text"]:focus,
 textarea:focus {
     outline: none;
     box-shadow: 0 0 5px dodgerblue;
 }
-  
+
 input[type="submit"] {
-    width: 285px;
+    width: 300px;
     padding: 10px;
     border: none;
     background-color: dodgerblue;
@@ -146,20 +150,44 @@ input[type="submit"] {
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s ease;
-  }
-  
+}
+
 input[type="submit"]:hover {
     background-color: #2979ff;
 }
 
-#email::placeholder, #message::placeholder {
+#email::placeholder,
+#message::placeholder {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-style: italic;
 }
 
-p.image img {
-    border-radius: 15px;
-    width: 280px;
-    height: auto;
+#weather {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+#location {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+#temperature {
+    font-size: 48px;
+    margin-top: 10px;
+    color: dodgerblue;
+}
+
+#condition {
+    margin-top: 10px;
+    color: grey;
+    opacity: 50%;
 }

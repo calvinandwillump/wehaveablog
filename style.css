@@ -203,3 +203,9 @@ div.box a.link {
 div.box a.link:hover {
     background-color: white;
 }
+
+div.box img.image {
+    width: 250px;
+    height: 100%;
+    border-radius: 15px;
+}

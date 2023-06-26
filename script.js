@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   const apiKey = '1f29df6b86584b0a91885733232206';
-  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=England`;
+  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=auto:ip`;
 
   function fetchWeatherData() {
     fetch(apiUrl)
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
           throw new Error('Invalid API response format');
         }
 
-        const location = data.location.name;
+        const location = data.location.country;
         const temperature = data.current.temp_c;
         const condition = data.current.condition.text;
 

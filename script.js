@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   const apiKey = '1f29df6b86584b0a91885733232206';
-  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=auto:ip`;
+  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=England`;
 
   function fetchWeatherData() {
     fetch(apiUrl)

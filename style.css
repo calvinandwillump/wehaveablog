@@ -110,7 +110,7 @@ div.box .scroll .blog {
     text-align: justify;
 }
 
-div.box .scroll #date {
+#date {
     text-align: left;
     color: grey;
     opacity: 50%;

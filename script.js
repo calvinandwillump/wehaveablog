@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   fetchWeatherData();
 
-  // Update the date dynamically
   function updateDate() {
     var currentDate = new Date();
 

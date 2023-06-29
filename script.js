@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function showAlert(event) {
     event.preventDefault();
-    alert("Yeah, we have a blog!");
+    alert("yeah we have a blog");
   }
 
   window.addEventListener('resize', function() {

@@ -4,26 +4,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function showAlert(event) {
     event.preventDefault();
-    alert("yeah we have a blog");
+    alert("Yeah, we have a blog!");
   }
 
   window.addEventListener('resize', function() {
     var box = document.querySelector('.box');
     var windowHeight = window.innerHeight;
     var thresholdHeight = 556;
-    
+
     if (windowHeight < thresholdHeight) {
       box.style.display = 'none';
     } else {
       box.style.display = 'block';
     }
   });
-  
+
   window.addEventListener('load', function() {
     var box = document.querySelector('.box');
     var windowHeight = window.innerHeight;
     var thresholdHeight = 556;
-    
+
     if (windowHeight < thresholdHeight) {
       box.style.display = 'none';
     }
@@ -59,4 +59,16 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   fetchWeatherData();
+
+  // Update the date dynamically
+  function updateDate() {
+    var currentDate = new Date();
+
+    var options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+    var formattedDate = currentDate.toLocaleDateString('en-US', options);
+
+    document.getElementById('date').innerHTML = formattedDate;
+  }
+
+  updateDate();
 });

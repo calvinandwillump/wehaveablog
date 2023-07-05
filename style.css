@@ -189,16 +189,16 @@ div.box div.video-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 168.75px;
-  background-color: #f2f2f2;
+  width: 300px;
+  height: auto;
+  background-color: whitesmoke;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 div.box div.video-container video {
-  width: 300px;
-  height: auto;
+  width: auto;
+  height: 168.75px;
   border-radius: 10px;
   outline: none;
   position: absolute;

@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  const apiKey = '1f29df6b86584b0a91885733232206';
+  const apiKey = '3fb38fbee53d4aa8822163545231312';
   const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=auto:ip`;
 
   function fetchWeatherData() {

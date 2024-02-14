@@ -6,7 +6,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     if (password === "Ladygaga1") {
 
-        window.location.href = "/homepage";
+        window.location.href = "https://www.wehaveablog.homepage";
     } else {
 
         document.getElementById("passwordInput").value = "";
